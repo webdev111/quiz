@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <div class="container">
+        <div class="jabquiz">
+          <div class="jabquiz__question-box">
+            <h1 class="jabquiz__question">what is your name?</h1>
+            <p class="jabquiz__tracker"></p>
+            <div class="progress">
+              <div class="progress__inner"></div>
+            </div>
+            <p class="jabquiz__tagline">Pick an option below!</p>
+          </div>
+          <div class="jabquiz__choices-box">
+            <ul class="jabquiz__choices">
+              <!-- dynamically with javascript -->
+              <li class="jabquiz__choice">
+                <input
+                  type="radio"
+                  name="choice"
+                  class="jabquiz__input"
+                  data-order="${index}"
+                  id="1"
+                />
+                <label for="1" class="jabquiz__label">
+                  <i></i>
+                  <span>option 1</span>
+                </label>
+              </li>
+              <li class="jabquiz__choice">
+                <input
+                  type="radio"
+                  name="choice"
+                  class="jabquiz__input"
+                  data-order="${index}"
+                  id="2"
+                />
+                <label for="2" class="jabquiz__label">
+                  <i></i>
+                  <span>option 2</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="jabquiz__footer">
+            <button class="button button--bordered next">Next</button>
+            <button class="button button--bordered restart">Restart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
